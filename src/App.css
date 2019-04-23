@@ -1,3 +1,15 @@
+body {
+    background-color: #0e9aa7
+}
+
+header {
+    text-align: center;
+    padding-top: 2%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+    color: #fff;
+}
+
 .App {
   text-align: center;
 }
@@ -30,4 +42,119 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.settings-section {
+  text-align: center;
+  color: #fff;
+}
+
+.settings-section label {
+  font-weight: 700;
+}
+
+.settings-section button {
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: 1px solid #4ebfc9;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 6px;
+    outline: none;
+    width: 35px;
+    height: 35px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+}
+
+.settings-section span {
+    width: 45px;
+    height: 45px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #444;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.settings {
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin-top: 55px;
+}
+
+.times, .times-content {
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+}
+
+#timer-label {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#time-left {
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.times-content {
+    display: inline-block;
+    margin: 0 auto;
+    width: 280px;
+    height: 280px;
+    margin-top: 25px;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 5px solid #4ebfc9;
+    border-radius: 50%;
+}
+
+.controller {
+    text-align: center;
+}
+
+#start_stop, #reset{
+    cursor: pointer;
+    border: 1px solid #4ebfc9;
+    border-radius: 6px;
+    width: 85px;
+    height: 35px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    align-items: center;
+    color:#fff;
+    background-color: #0e9aa7;
+    margin: 20px;    
+}
+
+footer {
+    text-align: center;
+    margin-top: 35px;
+    color: hsla(0,0%,100%,.65);
+    padding: 0 15px 15px;
 }
