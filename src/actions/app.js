@@ -1,6 +1,6 @@
 import { 
-    INCREMENT_BREAK, INCREMENT_SESSION,
-    DECREMENT_BREAK, DECREMENT_SESSION } from "./../constants/actionTypes";
+    INCREMENT_BREAK, INCREMENT_SESSION, SET_TIME_LEFT_IN_SECOND,
+    DECREMENT_BREAK, DECREMENT_SESSION, DECREASE_TIMER, SET_BREAK_LENGTH } from "./../constants/actionTypes";
 
 export const incrementBreak = () => {
     return {    
@@ -23,5 +23,25 @@ export const incrementSession = () => {
 export const decrementSession = () => {
     return {    
         type: DECREMENT_SESSION
+    }
+}
+
+export const decreaseTimer = () => {
+    return {
+        type: DECREASE_TIMER
+    }
+}
+
+export const setTimeLeftInSecond = (time) => {
+    return {
+        type: SET_TIME_LEFT_IN_SECOND,
+        time
+    }
+}
+
+export const setBreakLengthDefault = (time) => {
+    return {
+        type: SET_BREAK_LENGTH,
+        time
     }
 }

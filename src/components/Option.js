@@ -5,9 +5,6 @@ import {
     decrementBreak, decrementSession } from './../actions/app'
 
 class Option extends Component {
-    constructor(props) {
-        super(props)
-    }
 
     incrementBreakLength = () => {
         this.props.dispatch(incrementBreak())
@@ -30,7 +27,6 @@ class Option extends Component {
     }
 
     render() {
-        console.log(this.props)
         return (
             <div className="settings">
                 <div className="settings-section">

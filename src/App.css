@@ -2,6 +2,10 @@ body {
     background-color: #0e9aa7
 }
 
+a {
+  color: #fff;
+}
+
 header {
     text-align: center;
     padding-top: 2%;
@@ -12,27 +16,6 @@ header {
 
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -47,6 +30,17 @@ header {
 .settings-section {
   text-align: center;
   color: #fff;
+}
+
+#break-increment:hover,#break-decrement:hover,
+#session-increment:hover,#session-decrement:hover {
+  background-color: #61dafb
+}
+
+#break-increment:disabled,#break-decrement:disabled,
+#session-increment:disabled,#session-decrement:disabled {
+  cursor: not-allowed;
+  opacity: .5;
 }
 
 .settings-section label {
@@ -150,6 +144,10 @@ header {
     color:#fff;
     background-color: #0e9aa7;
     margin: 20px;    
+}
+
+#start_stop:hover, #reset:hover{
+  background-color: #61dafb
 }
 
 footer {
