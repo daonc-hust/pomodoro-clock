@@ -1,5 +1,29 @@
 body {
-    background-color: #0e9aa7
+  background-color: #0e9aa7;
+  /* background-image: linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%); */
+  /* background-image: linear-gradient(-225deg, #7DE2FC 0%, #B9B6E5 100%); */
+  /* background-image: linear-gradient(to bottom, #74ebd5 0%, #9face6 100%); */
+  /* background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%); */
+  background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  opacity: 0.9;  
+
+  display: block;
+  position: relative;
+}
+
+.times-content {
+    background-image: url("./constants/linh2.jpg");
+    background-size:  cover;
+    content: "";
+    display: block;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 1;
 }
 
 a {
@@ -32,6 +56,10 @@ header {
   color: #fff;
 }
 
+#break-length, #session-length,#break-increment,#break-decrement,#session-increment,#session-decrement{
+  font-weight: 700
+}
+
 #break-increment:hover,#break-decrement:hover,
 #session-increment:hover,#session-decrement:hover {
   background-color: #61dafb
@@ -43,6 +71,15 @@ header {
   opacity: .5;
 }
 
+#setting {
+  padding: 7px;
+}
+
+#label {
+  font-size: 17px;
+  padding: 15px;
+}
+
 .settings-section label {
   font-weight: 700;
 }
@@ -51,7 +88,7 @@ header {
     cursor: pointer;
     font-size: 1.1rem;
     font-weight: 700;
-    border: 1px solid #4ebfc9;
+    border: 2px solid #4ebfc9;
     background-color: transparent;
     color: #fff;
     border-radius: 6px;
@@ -80,6 +117,7 @@ header {
     justify-content: center;
     background-color: #fff;
     border-radius: 50%;
+    border: 2px solid #4ebfc9;
     color: #444;
     margin-left: 10px;
     margin-right: 10px;

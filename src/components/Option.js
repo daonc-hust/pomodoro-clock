@@ -30,16 +30,16 @@ class Option extends Component {
         return (
             <div className="settings">
                 <div className="settings-section">
-                    <label>Break Length</label>
-                    <div>
+                    <label id="label">Break Length</label>
+                    <div id="setting">
                         <button onClick={this.decrementBreakLength}  id="break-decrement">-</button>
                         <span id="break-length">{this.props.breakLength}</span>
                         <button onClick={this.incrementBreakLength} id="break-increment">+</button>
                     </div>
                 </div>
                 <div className="settings-section">
-                    <label>Session Length</label>
-                    <div>
+                    <label id="label">Session Length</label>
+                    <div id="setting">
                         <button onClick={this.decrementSessionLength} id="session-decrement">-</button>
                         <span id="session-length">{this.props.sessionLength}</span>
                         <button onClick={this.incrementSessionLength} id="session-increment">+</button>

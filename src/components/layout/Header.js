@@ -1,3 +1,3 @@
 import React from "react"
 
-export default () => <header>======== Pomodoro Clock ========</header>
+export default () => <header><h2>Pomodoro Clock</h2></header>

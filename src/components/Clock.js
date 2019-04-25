@@ -10,19 +10,8 @@ class Clock extends Component {
         this.state = {
             isStart: false,
             timerInterval: null,
+            label: "Session"
         }
-    }
-
-    phaseControl = () => {
-        if(this.props.timeLeftInSecond === 0) {
-            this.props.audioBeep.current.play();
-        } else if (this.props.timeLeftInSecond === -1) {
-            this.props.dispatch(setTimeLeftInSecond(this.props.breakLength * 60))
-        }
-    }
-
-    onDecreaseTimer = () => {
-        this.props.dispatch(decreaseTimer())
     }
 
     formatTime = (timeLeftInSecond) => {
@@ -33,6 +22,23 @@ class Clock extends Component {
         if (second < 10) second = '0' + second;
 
         return `${minute}:${second}`;
+    }
+
+    phaseControl = () => {
+        if(this.props.timeLeftInSecond === 0) {
+            this.setState({ label : "Break"})
+            this.props.audioBeep.current.play();
+        } else if (this.props.timeLeftInSecond === -1) {
+            this.props.dispatch(setTimeLeftInSecond(this.props.breakLength * 60))
+            setTimeout(() => {
+                this.setState({ label : "Session", isStart: !this.state.isStart})
+                this.onReset()
+            },this.props.breakLength * 60 * 1000)
+        }
+    }
+
+    onDecreaseTimer = () => {
+        this.props.dispatch(decreaseTimer())
     }
 
     onStartStop = () => {
@@ -68,11 +74,10 @@ class Clock extends Component {
     }
 
     render() {
-        console.log(this.props.breakLength)
         return (
             <div className="times">
                 <div className="times-content">
-                    <label id="timer-label">Session</label>
+                    <label id="timer-label">{this.state.label}</label>
                     <span id="time-left">{this.formatTime(this.props.timeLeftInSecond)}</span>
                 </div>
                 <div className="controller">
