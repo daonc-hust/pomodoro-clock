@@ -15,7 +15,7 @@ body {
 }
 
 .times-content {
-    background-image: url("./constants/linh2.jpg");
+    background-image: url("./public/linh2.jpg");
     background-size:  cover;
     content: "";
     display: block;
