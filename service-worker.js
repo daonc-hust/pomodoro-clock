@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Pomodoro-Clock/precache-manifest.f1a95fb96a759553a04f51e53215b078.js"
+  "/pomodoro-clock/precache-manifest.82f48556bb38b106bc0e2260571ff0e0.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Pomodoro-Clock/index.html", {
+workbox.routing.registerNavigationRoute("/pomodoro-clock/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
